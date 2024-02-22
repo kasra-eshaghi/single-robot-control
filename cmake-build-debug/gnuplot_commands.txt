@@ -1,0 +1,5 @@
+set title 'Custom Function Plot'
+set xlabel 'x'
+set ylabel 'y'
+plot 'custom_function_data.txt' with lines title 'Custom Function'
+plot 'custom_function_data2.txt' with lines title 'Custom Function2'
