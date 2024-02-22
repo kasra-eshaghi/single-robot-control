@@ -1,14 +1,14 @@
 # ninja log v5
-2	1440	7303217242224497	build.ninja	561f6b6ef202e5ef
-56	2261	7303213081009547	CMakeFiles/single_robot_control.dir/main.cpp.obj	6bec724ae6525388
-1913	18716	7303215207074267	single_robot_control.exe	cf47ecb2fb3cba80
+2	1449	7303295717105448	build.ninja	561f6b6ef202e5ef
+39	2119	7303234577464532	CMakeFiles/single_robot_control.dir/main.cpp.obj	6bec724ae6525388
+1891	18189	7303234985954005	single_robot_control.exe	5b02f511444d09e8
 1995	14552	7297989392625354	matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/matrix.cpp.obj	210f8c7914bfe4a3
 398	11240	7297989358627249	matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/world_map_10m.cpp.obj	3f7c8758c2128575
 128	1785	7297989264833725	matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/nodesoup/src/kamada_kawai.cpp.obj	8ce8754a1d328d99
 24	125	7294604262446765	CMakeFiles/single_robot_control.dir/Robot.cpp.obj	a095186763ec5480
 17	419	7294634451233244	CMakeFiles/single_robot_control.dir/src/path_planning.cpp.obj	ed740aa0c21e687
 1537	13973	7297989386107617	matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/figure_type.cpp.obj	e4865b20d40e2472
-72	2263	7303213081039547	CMakeFiles/single_robot_control.dir/src/Robot.cpp.obj	7c20846d86138197
+22	2100	7303234577249137	CMakeFiles/single_robot_control.dir/src/Robot.cpp.obj	7c20846d86138197
 51	646	7298104982392822	CMakeFiles/single_robot_control.dir/src/Path_Planner.cpp.obj	6def874d999f5bc5
 23	355	7298104979503352	CMakeFiles/single_robot_control.dir/src/Extras.cpp.obj	579fb043d0af3936
 71	603	7298104981969092	CMakeFiles/single_robot_control.dir/src/Localizer.cpp.obj	3db321e18e41e81d
@@ -55,16 +55,4 @@
 181	17171	7297989418745552	matplotplusplus/source/matplot/CMakeFiles/matplot.dir/backend/gnuplot.cpp.obj	24ede8e2e670481b
 13569	17245	7297989419576305	matplotplusplus/source/matplot/CMakeFiles/matplot.dir/freestanding/axes_functions.cpp.obj	93b4a9fc0f497443
 216	18678	7297989433760745	matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/axes_type.cpp.obj	9cc0d16d1ff9f250
-7	2366	7303213082045585	CMakeFiles/single_robot_control.dir/src/Planning.cpp.obj	ad9a1a653777effd
-2	1449	7303217242224497	build.ninja	561f6b6ef202e5ef
-6	1811	7303217262023565	CMakeFiles/single_robot_control.dir/main.cpp.obj	6bec724ae6525388
-5	1898	7303218340635678	CMakeFiles/single_robot_control.dir/src/Planning.cpp.obj	ad9a1a653777effd
-1899	19711	7303218517470315	single_robot_control.exe	5b02f511444d09e8
-6	1945	7303219544498754	CMakeFiles/single_robot_control.dir/src/Planning.cpp.obj	ad9a1a653777effd
-1946	18856	7303219712435186	single_robot_control.exe	5b02f511444d09e8
-7	1917	7303221533770464	CMakeFiles/single_robot_control.dir/src/Planning.cpp.obj	ad9a1a653777effd
-1918	18419	7303221697640667	single_robot_control.exe	5b02f511444d09e8
-22	2100	7303234577249137	CMakeFiles/single_robot_control.dir/src/Robot.cpp.obj	7c20846d86138197
-39	2119	7303234577464532	CMakeFiles/single_robot_control.dir/main.cpp.obj	6bec724ae6525388
 6	1891	7303234824214331	CMakeFiles/single_robot_control.dir/src/Planning.cpp.obj	ad9a1a653777effd
-1891	18189	7303234985954005	single_robot_control.exe	5b02f511444d09e8
