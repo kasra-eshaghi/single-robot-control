@@ -13,15 +13,14 @@
 #include "Problem_Instance.h"
 #include <matplot/matplot.h>
 
-
-void plan_linear_path(Pose& pose_0, Pose& pose_f, Linear_Path& path);// plans linear path between endpoints
-void get_desired_pose(Pose& pose_desired, Linear_Path& linear_path, double& s); // gets desired pose of robot at specific distance along path
-
-// RRT node specs
+// RRT node specs - FOR PLOTTING
 #define RRT_NODE_MARKER_SIZE    10
 #define RRT_NODE_MARKER_COLOR   "black"
 #define RRT_PATH_COLOR          "black"
 #define RRT_PATH_WIDTH          5
+
+void plan_linear_path(Pose& pose_0, Pose& pose_f, Linear_Path& path);// plans linear path between endpoints
+void get_desired_pose(Pose& pose_desired, Linear_Path& linear_path, double& s); // gets desired pose of robot at specific distance along path
 
 struct Node {
     int number;

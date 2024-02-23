@@ -16,7 +16,6 @@
 class Controller {
 public:
     Controller(double K_P);
-
     void calculate_motion_command(Pose& pose_estimated, Pose& pose_desired, Motion_Command& motion_command); // calculates motion command
 
 private:

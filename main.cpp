@@ -15,12 +15,6 @@
 #include "include/Problem_Instance.h"
 
 
-using namespace matplot;
-
-
-#include <dlib/optimization.h>
-#include <dlib/global_optimization.h>
-
 int main() {
 
 
@@ -31,7 +25,6 @@ int main() {
     // create problem instance
     Problem_Instance problem(0.5, 5, 0.1, generator);
 
-    //problem.plot_problem_instance(fig);
 
     // generate robot and its modules
     RRT rrt(problem, generator);
@@ -53,30 +46,11 @@ int main() {
         pose_y_hat.push_back(robot.pose_hat_history[i].y);
     }
 
-    plot(pose_x_hat, pose_y_hat);
-    hold(on);
-    plot(pose_x_true, pose_y_true);
+    problem.plot_problem_instance(fig);
+    matplot::plot(pose_x_hat, pose_y_hat);
+    matplot::plot(pose_x_true, pose_y_true);
 
-    show();
-
-
-
-
-
-    /*
-    matplot::cla(fig->current_axes());
-
-    // create RRT instance
-    RRT rrt(problem, generator);
-
-    // plan using RRt
-    rrt.plan_path_RRT(true);
-    */
-
-
-
-
-
+    matplot::show();
 
     return 0;
 }

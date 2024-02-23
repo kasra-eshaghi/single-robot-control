@@ -7,13 +7,18 @@
 
 
 void plan_linear_path(Pose& pose_0, Pose& pose_f, Linear_Path& path) {
-
+    /**
+     * \brief Plans a linear path from one pose to another.
+     */
     path.distance = sqrt(pow(pose_f.x - pose_0.x, 2) + pow(pose_f.y - pose_0.y, 2));
     path.angle = atan2(pose_f.y - pose_0.y, pose_f.x - pose_0.x);
     path.pose_0 = pose_0;
 }
 
 void get_desired_pose(Pose& pose_desired, Linear_Path& linear_path, double& s) {
+    /**
+     * brief Gets the desired pose of the robot at an increment along its linear path
+     */
     pose_desired.x = linear_path.pose_0.x + s * linear_path.distance * cos(linear_path.angle);
     pose_desired.y = linear_path.pose_0.y + s * linear_path.distance * sin(linear_path.angle);
 }
@@ -76,24 +81,9 @@ bool RRT::plan_path_RRT(bool talk) {
                         path_found = true;
                     }
                 }
-
-                // plot progress
-//                if (talk){
-//                    auto fig = matplot::figure();
-//                    matplot::hold(matplot::on);
-//                    plot_RRT_nodes(fig);
-//                }
             }
         }
     }
-
-    // generate returned path as a vector of nodes starting from initial node and ending at final node
-//    if (talk){
-//        auto fig = matplot::figure();
-//        matplot::hold(matplot::on);
-//        plot_RRT_nodes(fig);
-//        fig->show();
-//    }
 
     if (path_found){
         std::vector<int> planned_path_node_ids{1};
@@ -107,10 +97,6 @@ bool RRT::plan_path_RRT(bool talk) {
             planned_path.push_back(nodes[id]);
         }
 
-//        for (auto& id:planned_path_node_ids){
-//            planned_path.push_back(nodes[id]);
-//        }
-
         if (talk){
             auto fig = matplot::figure();
             matplot::hold(matplot::on);
@@ -119,7 +105,6 @@ bool RRT::plan_path_RRT(bool talk) {
         }
     }
     return path_found;
-
 }
 
 Node RRT::sample_random_node(){
@@ -227,9 +212,11 @@ void RRT::plot_RRT_nodes(matplot::figure_handle& fig) {
 }
 
 void RRT::plot_planned_path(matplot::figure_handle &fig) {
+    /**
+     * \brief Plots the planned path found using RRT
+     */
 
     plot_RRT_nodes(fig);
-
     for (auto i=0; i<(planned_path.size() - 1); i++){
         Node start_node = planned_path[i];
         Node end_node = planned_path[i+1];
@@ -239,5 +226,4 @@ void RRT::plot_planned_path(matplot::figure_handle &fig) {
         auto line_ax = fig->current_axes()->plot(x, y);
         line_ax->color(RRT_PATH_COLOR).line_width(RRT_PATH_WIDTH);
     }
-
 }

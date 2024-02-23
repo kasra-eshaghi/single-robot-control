@@ -40,7 +40,7 @@ void Robot::run_control_architecture(Problem_Instance& problem, bool talk) {
         double n_iterations = 5;
         double delta_t = 1/n_iterations;
         Pose pose_desired;
-        for (auto i=0 ; i <n_iterations; i++){
+        for (auto i=1 ; i <=n_iterations; i++){
             // determine next desired position
             double s = double(i) / n_iterations;
             get_desired_pose(pose_desired, linear_path, s);
@@ -57,11 +57,7 @@ void Robot::run_control_architecture(Problem_Instance& problem, bool talk) {
             // localize robot
             localizer->localize_robot(pose_hat_history, pose_hat, motion_command, sensors->delta_x_measurements, sensors->delta_y_measurements, sensors->measurement_mask, problem.map);
         }
-
     }
-
-
-
 }
 
 void Robot::execute_motion_commands() {

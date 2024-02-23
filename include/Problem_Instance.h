@@ -27,7 +27,6 @@
 class Problem_Instance {
 public:
     Problem_Instance(double map_width, int n_landmarks, double max_landmark_radius, std::default_random_engine& generator);
-
     void plot_problem_instance(matplot::figure_handle& fig);
 
     Pose pose_init, pose_final;
@@ -35,7 +34,6 @@ public:
     bool feasible = true;
 
 private:
-
     std::vector<std::pair<double, double>> get_circle_points(double center_x, double center_y, double radius);
     void find_quadrant_limits(double& x_min, double& x_max, double& y_min, double& y_max, double map_width, int quadrant);
 

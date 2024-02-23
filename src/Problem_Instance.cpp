@@ -83,8 +83,6 @@ Problem_Instance::Problem_Instance(double map_width, int n_landmarks, double max
     pose_final.x = x_final;
     pose_final.y = y_final;
 
-
-
 }
 
 void Problem_Instance::find_quadrant_limits(double& x_min, double& x_max, double& y_min, double& y_max, double map_width, int quadrant) {
@@ -121,6 +119,9 @@ void Problem_Instance::find_quadrant_limits(double& x_min, double& x_max, double
 }
 
 void Problem_Instance::plot_problem_instance(matplot::figure_handle &fig) {
+    /**
+     * Plots the problem instance
+     */
 
     auto ax = fig->current_axes();
 
@@ -152,6 +153,9 @@ void Problem_Instance::plot_problem_instance(matplot::figure_handle &fig) {
 }
 
 std::vector<std::pair<double, double>> Problem_Instance::get_circle_points(double center_x, double center_y, double radius){
+    /**
+     * \brief Returns a vector of points representing a circle (for plotting purposes)
+     */
     std::vector<std::pair<double, double>> circle_points;
     std::pair<double, double> point;
 
