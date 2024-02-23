@@ -6,23 +6,17 @@
 #include "../include/Planning.h"
 
 
-Path_Planner::Path_Planner() {
-    std::cout << "Creating path planning module" << std::endl;
-}
-
-
-void Path_Planner::plan_linear_path(Pose& pose_0, Pose& pose_f, Linear_Path& path) {
+void plan_linear_path(Pose& pose_0, Pose& pose_f, Linear_Path& path) {
 
     path.distance = sqrt(pow(pose_f.x - pose_0.x, 2) + pow(pose_f.y - pose_0.y, 2));
     path.angle = atan2(pose_f.y - pose_0.y, pose_f.x - pose_0.x);
     path.pose_0 = pose_0;
 }
 
-void Path_Planner::get_desired_pose(Pose& pose_desired, Linear_Path& linear_path, double& s) {
+void get_desired_pose(Pose& pose_desired, Linear_Path& linear_path, double& s) {
     pose_desired.x = linear_path.pose_0.x + s * linear_path.distance * cos(linear_path.angle);
     pose_desired.y = linear_path.pose_0.y + s * linear_path.distance * sin(linear_path.angle);
 }
-
 
 
 RRT::RRT(Problem_Instance& problem_instance, std::default_random_engine& generator) {
@@ -103,15 +97,19 @@ bool RRT::plan_path_RRT(bool talk) {
 
     if (path_found){
         std::vector<int> planned_path_node_ids{1};
-        bool end_of_path = false;
         while (nodes[planned_path_node_ids.back()].parent != 0){
             planned_path_node_ids.push_back(nodes[planned_path_node_ids.back()].parent);
         }
         planned_path_node_ids.push_back(0);
 
-        for (auto& id:planned_path_node_ids){
+        for (auto i=0; i<planned_path_node_ids.size(); i++){
+            int id = planned_path_node_ids[planned_path_node_ids.size() - 1 - i];
             planned_path.push_back(nodes[id]);
         }
+
+//        for (auto& id:planned_path_node_ids){
+//            planned_path.push_back(nodes[id]);
+//        }
 
         if (talk){
             auto fig = matplot::figure();

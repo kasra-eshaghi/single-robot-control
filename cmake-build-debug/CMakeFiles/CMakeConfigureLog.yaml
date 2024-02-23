@@ -568,3 +568,336 @@ events:
         
       exitCode: 1
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)"
+    directories:
+      source: "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/neon_test.dir/neon_test.cpp.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp:3:2: error: #error "No NEON"
+            3 | #error "No NEON"
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/find_blas.cmake:73 (CHECK_FUNCTION_EXISTS)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Looking for cblas_ddot"
+    directories:
+      source: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq4m16"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq4m16"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "PKGCFG_HAVE_CBLAS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq4m16'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v cmTC_05deb
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=cblas_ddot -o CMakeFiles/cmTC_05deb.dir/CheckFunctionExists.c.obj -c C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq4m16/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=cblas_ddot  CMakeFiles/cmTC_05deb.dir/CheckFunctionExists.c.obj -o cmTC_05deb.exe -Wl,--out-implib,libcmTC_05deb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        \x1b[31mFAILED: \x1b[0mcmTC_05deb.exe 
+        cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=cblas_ddot  CMakeFiles/cmTC_05deb.dir/CheckFunctionExists.c.obj -o cmTC_05deb.exe -Wl,--out-implib,libcmTC_05deb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:\\Program Files\\JetBrains\\CLion 2023.3.3\\bin\\mingw\\bin/ld.exe: CMakeFiles/cmTC_05deb.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `cblas_ddot'
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckTypeSize.cmake:250 (check_include_file)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/find_blas.cmake:85 (check_type_size)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9zo1qs"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9zo1qs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9zo1qs'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v cmTC_4aecd
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_4aecd.dir/CheckIncludeFile.c.obj -c C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9zo1qs/CheckIncludeFile.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_4aecd.dir/CheckIncludeFile.c.obj -o cmTC_4aecd.exe -Wl,--out-implib,libcmTC_4aecd.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/find_blas.cmake:85 (check_type_size)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-htvs5d"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-htvs5d"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-htvs5d'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v cmTC_dbcb5
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_dbcb5.dir/CheckIncludeFile.c.obj -c C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-htvs5d/CheckIncludeFile.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_dbcb5.dir/CheckIncludeFile.c.obj -o cmTC_dbcb5.exe -Wl,--out-implib,libcmTC_dbcb5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/find_blas.cmake:85 (check_type_size)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nd3mc4"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nd3mc4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nd3mc4'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v cmTC_39c07
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_39c07.dir/CheckIncludeFile.c.obj -c C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nd3mc4/CheckIncludeFile.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_39c07.dir/CheckIncludeFile.c.obj -o cmTC_39c07.exe -Wl,--out-implib,libcmTC_39c07.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/find_blas.cmake:85 (check_type_size)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Check size of void*"
+    directories:
+      source: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ktqa0"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ktqa0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SIZE_OF_VOID_PTR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ktqa0'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v cmTC_8bc6a
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_8bc6a.dir/SIZE_OF_VOID_PTR.c.obj -c C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ktqa0/SIZE_OF_VOID_PTR.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_8bc6a.dir/SIZE_OF_VOID_PTR.c.obj -o cmTC_8bc6a.exe -Wl,--out-implib,libcmTC_8bc6a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)"
+    directories:
+      source: "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/neon_test.dir/neon_test.cpp.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp:3:2: error: #error "No NEON"
+            3 | #error "No NEON"
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)"
+    directories:
+      source: "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.3/bin/ninja/win/x64/ninja.exe" -v
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        FAILED: CMakeFiles/neon_test.dir/neon_test.cpp.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp:3:2: error: #error "No NEON"
+            3 | #error "No NEON"
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)"
+    directories:
+      source: "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/neon_test.dir/neon_test.cpp.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[01m\x1b[KC:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp:3:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K#error "No NEON"
+            3 | #\x1b[01;31m\x1b[Kerror\x1b[m\x1b[K "No NEON"
+              |  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)"
+    directories:
+      source: "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/neon_test.dir/neon_test.cpp.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[01m\x1b[KC:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp:3:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K#error "No NEON"
+            3 | #\x1b[01;31m\x1b[Kerror\x1b[m\x1b[K "No NEON"
+              |  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)"
+    directories:
+      source: "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/neon_test.dir/neon_test.cpp.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[01m\x1b[KC:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp:3:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K#error "No NEON"
+            3 | #\x1b[01;31m\x1b[Kerror\x1b[m\x1b[K "No NEON"
+              |  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)"
+    directories:
+      source: "C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/neon_test_build'
+        
+        Run Build Command(s): C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe -v
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/neon_test.dir/neon_test.cpp.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always -o CMakeFiles/neon_test.dir/neon_test.cpp.obj -c C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp
+        \x1b[01m\x1b[KC:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/neon_test.cpp:3:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K#error "No NEON"
+            3 | #\x1b[01;31m\x1b[Kerror\x1b[m\x1b[K "No NEON"
+              |  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

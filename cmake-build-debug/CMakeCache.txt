@@ -257,7 +257,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.3/bin/mingw/bin/ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.3/bin/ninja/win/x64/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/ninja/win/x64/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -395,6 +395,137 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Compile device code in 64 bit mode
+CUDA_64_BIT_DEVICE_CODE:BOOL=ON
+
+//Attach the build rule to the CUDA source file.  Enable only when
+// the CUDA source file is added to at most one target.
+CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE:BOOL=ON
+
+//Generate and parse .cubin files in Device mode.
+CUDA_BUILD_CUBIN:BOOL=OFF
+
+//Build in Emulation mode
+CUDA_BUILD_EMULATION:BOOL=OFF
+
+//"cudart" library
+CUDA_CUDART_LIBRARY:FILEPATH=CUDA_CUDART_LIBRARY-NOTFOUND
+
+//"cuda" library (older versions only).
+CUDA_CUDA_LIBRARY:FILEPATH=CUDA_CUDA_LIBRARY-NOTFOUND
+
+//Directory to put all the output files.  If blank it will default
+// to the CMAKE_CURRENT_BINARY_DIR
+CUDA_GENERATED_OUTPUT_DIR:PATH=
+
+//Generated file extension
+CUDA_HOST_COMPILATION_CPP:BOOL=ON
+
+//Host side compiler used by NVCC
+CUDA_HOST_COMPILER:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.3/bin/mingw/bin/gcc.exe
+
+//Path to a program.
+CUDA_NVCC_EXECUTABLE:FILEPATH=CUDA_NVCC_EXECUTABLE-NOTFOUND
+
+//Semi-colon delimit multiple arguments. during all build types.
+CUDA_NVCC_FLAGS:STRING=
+
+//Semi-colon delimit multiple arguments. during DEBUG builds.
+CUDA_NVCC_FLAGS_DEBUG:STRING=
+
+//Semi-colon delimit multiple arguments. during MINSIZEREL builds.
+CUDA_NVCC_FLAGS_MINSIZEREL:STRING=
+
+//Semi-colon delimit multiple arguments. during RELEASE builds.
+CUDA_NVCC_FLAGS_RELEASE:STRING=
+
+//Semi-colon delimit multiple arguments. during RELWITHDEBINFO
+// builds.
+CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
+
+//Propagate C/CXX_FLAGS and friends to the host compiler via -Xcompile
+CUDA_PROPAGATE_HOST_FLAGS:BOOL=ON
+
+//Path to a file.
+CUDA_SDK_ROOT_DIR:PATH=CUDA_SDK_ROOT_DIR-NOTFOUND
+
+//Compile CUDA objects with separable compilation enabled.  Requires
+// CUDA 5.0+
+CUDA_SEPARABLE_COMPILATION:BOOL=OFF
+
+//Path to a file.
+CUDA_TOOLKIT_INCLUDE:PATH=CUDA_TOOLKIT_INCLUDE-NOTFOUND
+
+//Print out the commands run while compiling the CUDA source file.
+//  With the Makefile generator this defaults to VERBOSE variable
+// specified on the command line, but can be forced on with this
+// option.
+CUDA_VERBOSE_BUILD:BOOL=OFF
+
+//"cublas" library
+CUDA_cublas_LIBRARY:FILEPATH=CUDA_cublas_LIBRARY-NOTFOUND
+
+//"cublasemu" library
+CUDA_cublasemu_LIBRARY:FILEPATH=CUDA_cublasemu_LIBRARY-NOTFOUND
+
+//"cufft" library
+CUDA_cufft_LIBRARY:FILEPATH=CUDA_cufft_LIBRARY-NOTFOUND
+
+//"cufftemu" library
+CUDA_cufftemu_LIBRARY:FILEPATH=CUDA_cufftemu_LIBRARY-NOTFOUND
+
+//Enable this if you want to turn on the DLIB_ASSERT macro
+DLIB_ENABLE_ASSERTS:BOOL=OFF
+
+//Enable this if you want to turn on the DLIB_STACK_TRACE macros
+DLIB_ENABLE_STACK_TRACE:BOOL=OFF
+
+//Disable this if you don't want to link against libgif
+DLIB_GIF_SUPPORT:STRING=OFF
+
+//Enable this if you don't want to compile any non-ISO C++ code
+// (i.e. you don't use any of the API Wrappers)
+DLIB_ISO_CPP_ONLY:BOOL=OFF
+
+//Disable this if you don't want to link against libjpeg
+DLIB_JPEG_SUPPORT:BOOL=ON
+
+//Disable this if you don't want to link against sqlite3
+DLIB_LINK_WITH_SQLITE3:STRING=OFF
+
+//Enable this if you don't want to compile any of the dlib GUI
+// code
+DLIB_NO_GUI_SUPPORT:BOOL=OFF
+
+//Disable this if you don't want to link against libpng
+DLIB_PNG_SUPPORT:BOOL=ON
+
+//Disable this if you don't want to use a BLAS library
+DLIB_USE_BLAS:STRING=OFF
+
+//Disable this if you don't want to use NVIDIA CUDA
+DLIB_USE_CUDA:STRING=OFF
+
+//Set this to a comma-separated list of CUDA compute capabilities
+DLIB_USE_CUDA_COMPUTE_CAPABILITIES:STRING=50
+
+//Disable this if you don't want to use a LAPACK library
+DLIB_USE_LAPACK:STRING=OFF
+
+//Disable this is you don't want to use the MKL DFTI FFT implementation
+DLIB_USE_MKL_FFT:STRING=OFF
+
+//Enable this if you have MKL installed and want to use the sequential
+// version instead of the multi-core version.
+DLIB_USE_MKL_SEQUENTIAL:BOOL=OFF
+
+//Enable this if you have MKL installed and want to use the tbb
+// version instead of the openmp version.
+DLIB_USE_MKL_WITH_TBB:BOOL=OFF
+
+//Disable this if you don't want to link against libwebp
+DLIB_WEBP_SUPPORT:BOOL=OFF
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/_deps
 
@@ -437,6 +568,12 @@ FFTW_LONGDOUBLE_OPENMP_LIB:FILEPATH=FFTW_LONGDOUBLE_OPENMP_LIB-NOTFOUND
 
 //Path to a library.
 FFTW_LONGDOUBLE_THREADS_LIB:FILEPATH=FFTW_LONGDOUBLE_THREADS_LIB-NOTFOUND
+
+//Path to a file.
+GIF_INCLUDE_DIR:PATH=GIF_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+GIF_LIBRARY:FILEPATH=GIF_LIBRARY-NOTFOUND
 
 //Path to a file.
 JPEG_INCLUDE_DIR:PATH=JPEG_INCLUDE_DIR-NOTFOUND
@@ -526,6 +663,18 @@ TIFF_LIBRARY_DEBUG:FILEPATH=TIFF_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 TIFF_LIBRARY_RELEASE:FILEPATH=TIFF_LIBRARY_RELEASE-NOTFOUND
 
+//Compile your program with AVX instructions
+USE_AVX_INSTRUCTIONS:BOOL=OFF
+
+//Compile your program with SSE2 instructions
+USE_SSE2_INSTRUCTIONS:BOOL=OFF
+
+//Compile your program with SSE4 instructions
+USE_SSE4_INSTRUCTIONS:BOOL=OFF
+
+//Path to a file.
+WEBP_INCLUDE_DIR:PATH=WEBP_INCLUDE_DIR-NOTFOUND
+
 //Path to a file.
 ZLIB_INCLUDE_DIR:PATH=ZLIB_INCLUDE_DIR-NOTFOUND
 
@@ -535,8 +684,68 @@ ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 ZLIB_LIBRARY_RELEASE:FILEPATH=ZLIB_LIBRARY_RELEASE-NOTFOUND
 
+//Path to a library.
+atlas_lib:FILEPATH=atlas_lib-NOTFOUND
+
+//Path to a library.
+cblas_lib:FILEPATH=cblas_lib-NOTFOUND
+
+//Value Computed by CMake
+dlib_BINARY_DIR:STATIC=C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib
+
+//Value Computed by CMake
+dlib_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+dlib_LIB_DEPENDS:STATIC=general;ws2_32;general;winmm;general;comctl32;general;gdi32;general;imm32;
+
+//Value Computed by CMake
+dlib_SOURCE_DIR:STATIC=C:/cpp_libraries/dlib-19.24/dlib
+
+//Value Computed by CMake
+dlib_project_BINARY_DIR:STATIC=C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build
+
+//Value Computed by CMake
+dlib_project_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+dlib_project_SOURCE_DIR:STATIC=C:/cpp_libraries/dlib-19.24
+
+//Path to a library.
+generic_blas:FILEPATH=generic_blas-NOTFOUND
+
+//Path to a library.
+lapack_lib:FILEPATH=lapack_lib-NOTFOUND
+
+//Path to a library.
+mkl_core:FILEPATH=mkl_core-NOTFOUND
+
+//Path to a file.
+mkl_include_dir:PATH=mkl_include_dir-NOTFOUND
+
+//Path to a library.
+mkl_intel:FILEPATH=mkl_intel-NOTFOUND
+
+//Path to a library.
+mkl_iomp:FILEPATH=mkl_iomp-NOTFOUND
+
+//Path to a library.
+mkl_pthread:FILEPATH=mkl_pthread-NOTFOUND
+
+//Path to a library.
+mkl_rt:FILEPATH=mkl_rt-NOTFOUND
+
+//Path to a library.
+mkl_thread:FILEPATH=mkl_thread-NOTFOUND
+
 //The directory containing a CMake configuration file for nodesoup.
 nodesoup_DIR:PATH=nodesoup_DIR-NOTFOUND
+
+//Path to a library.
+openmp_libraries:FILEPATH=openmp_libraries-NOTFOUND
+
+//Path to a library.
+satlas_lib:FILEPATH=satlas_lib-NOTFOUND
 
 //Value Computed by CMake
 single_robot_control_BINARY_DIR:STATIC=C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug
@@ -547,6 +756,15 @@ single_robot_control_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 single_robot_control_SOURCE_DIR:STATIC=C:/Users/user/Documents/GitHub/single-robot-control
 
+//Path to a library.
+sqlite:FILEPATH=sqlite-NOTFOUND
+
+//Path to a file.
+sqlite_path:PATH=sqlite_path-NOTFOUND
+
+//Path to a library.
+tatlas_lib:FILEPATH=tatlas_lib-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries
@@ -554,6 +772,27 @@ single_robot_control_SOURCE_DIR:STATIC=C:/Users/user/Documents/GitHub/single-rob
 
 //ADVANCED property for variable: BLAS_Accelerate_LIBRARY
 BLAS_Accelerate_LIBRARY-ADVANCED:INTERNAL=1
+BLAS_REFERENCE_CFLAGS:INTERNAL=
+BLAS_REFERENCE_CFLAGS_I:INTERNAL=
+BLAS_REFERENCE_CFLAGS_OTHER:INTERNAL=
+BLAS_REFERENCE_FOUND:INTERNAL=
+BLAS_REFERENCE_INCLUDEDIR:INTERNAL=
+BLAS_REFERENCE_LIBDIR:INTERNAL=
+BLAS_REFERENCE_LIBS:INTERNAL=
+BLAS_REFERENCE_LIBS_L:INTERNAL=
+BLAS_REFERENCE_LIBS_OTHER:INTERNAL=
+BLAS_REFERENCE_LIBS_PATHS:INTERNAL=
+BLAS_REFERENCE_MODULE_NAME:INTERNAL=
+BLAS_REFERENCE_PREFIX:INTERNAL=
+BLAS_REFERENCE_STATIC_CFLAGS:INTERNAL=
+BLAS_REFERENCE_STATIC_CFLAGS_I:INTERNAL=
+BLAS_REFERENCE_STATIC_CFLAGS_OTHER:INTERNAL=
+BLAS_REFERENCE_STATIC_LIBDIR:INTERNAL=
+BLAS_REFERENCE_STATIC_LIBS:INTERNAL=
+BLAS_REFERENCE_STATIC_LIBS_L:INTERNAL=
+BLAS_REFERENCE_STATIC_LIBS_OTHER:INTERNAL=
+BLAS_REFERENCE_STATIC_LIBS_PATHS:INTERNAL=
+BLAS_REFERENCE_VERSION:INTERNAL=
 //Have function sgemm_
 BLAS_WORKS:INTERNAL=
 //ADVANCED property for variable: BLAS_acml_LIBRARY
@@ -746,7 +985,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -806,6 +1045,66 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 COMPILER_HAS_DEPRECATED:INTERNAL=1
 //Test COMPILER_HAS_DEPRECATED_ATTR
 COMPILER_HAS_DEPRECATED_ATTR:INTERNAL=1
+//ADVANCED property for variable: CUDA_64_BIT_DEVICE_CODE
+CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE
+CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_BUILD_CUBIN
+CUDA_BUILD_CUBIN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_BUILD_EMULATION
+CUDA_BUILD_EMULATION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_CUDART_LIBRARY
+CUDA_CUDART_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_CUDA_LIBRARY
+CUDA_CUDA_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_GENERATED_OUTPUT_DIR
+CUDA_GENERATED_OUTPUT_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_HOST_COMPILATION_CPP
+CUDA_HOST_COMPILATION_CPP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_NVCC_EXECUTABLE
+CUDA_NVCC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_NVCC_FLAGS
+CUDA_NVCC_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_NVCC_FLAGS_DEBUG
+CUDA_NVCC_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_NVCC_FLAGS_MINSIZEREL
+CUDA_NVCC_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_NVCC_FLAGS_RELEASE
+CUDA_NVCC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_NVCC_FLAGS_RELWITHDEBINFO
+CUDA_NVCC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_PROPAGATE_HOST_FLAGS
+CUDA_PROPAGATE_HOST_FLAGS-ADVANCED:INTERNAL=1
+//This is the value of the last time CUDA_SDK_ROOT_DIR was set
+// successfully.
+CUDA_SDK_ROOT_DIR_INTERNAL:INTERNAL=CUDA_SDK_ROOT_DIR-NOTFOUND
+//ADVANCED property for variable: CUDA_SEPARABLE_COMPILATION
+CUDA_SEPARABLE_COMPILATION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_TOOLKIT_INCLUDE
+CUDA_TOOLKIT_INCLUDE-ADVANCED:INTERNAL=1
+//This is the value of the last time CUDA_TOOLKIT_ROOT_DIR was
+// set successfully.
+CUDA_TOOLKIT_ROOT_DIR_INTERNAL:INTERNAL=
+//This is the value of the last time CUDA_TOOLKIT_TARGET_DIR was
+// set successfully.
+CUDA_TOOLKIT_TARGET_DIR_INTERNAL:INTERNAL=
+CUDA_USE_STATIC_CUDA_RUNTIME:INTERNAL=OFF
+//ADVANCED property for variable: CUDA_VERBOSE_BUILD
+CUDA_VERBOSE_BUILD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cublas_LIBRARY
+CUDA_cublas_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cublasemu_LIBRARY
+CUDA_cublasemu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufft_LIBRARY
+CUDA_cufft_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufftemu_LIBRARY
+CUDA_cufftemu_LIBRARY-ADVANCED:INTERNAL=1
+//Location of make2cmake.cmake
+CUDA_make2cmake:INTERNAL=C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindCUDA/make2cmake.cmake
+//Location of parse_cubin.cmake
+CUDA_parse_cubin:INTERNAL=C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindCUDA/parse_cubin.cmake
+//Location of run_nvcc.cmake
+CUDA_run_nvcc:INTERNAL=C:/Program Files/JetBrains/CLion 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindCUDA/run_nvcc.cmake
 //ADVANCED property for variable: FFTW_DOUBLE_LIB
 FFTW_DOUBLE_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FFTW_DOUBLE_OPENMP_LIB
@@ -830,18 +1129,55 @@ FFTW_LONGDOUBLE_THREADS_LIB-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[C:/local/boost_1_84_0][c ][v1.84.0(1.70)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GIF_INCLUDE_DIR
+GIF_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIF_LIBRARY
+GIF_LIBRARY-ADVANCED:INTERNAL=1
 //Have symbol __fbufsize
 HAVE_FBUFSIZE:INTERNAL=
+//Result of TRY_COMPILE
+HAVE_SIZE_OF_VOID_PTR:INTERNAL=TRUE
+//Have include stddef.h
+HAVE_STDDEF_H:INTERNAL=1
+//Have include stdint.h
+HAVE_STDINT_H:INTERNAL=1
+//Have include sys/types.h
+HAVE_SYS_TYPES_H:INTERNAL=1
 //ADVANCED property for variable: JPEG_INCLUDE_DIR
 JPEG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JPEG_LIBRARY_DEBUG
 JPEG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JPEG_LIBRARY_RELEASE
 JPEG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+LAPACK_REFERENCE_CFLAGS:INTERNAL=
+LAPACK_REFERENCE_CFLAGS_I:INTERNAL=
+LAPACK_REFERENCE_CFLAGS_OTHER:INTERNAL=
+LAPACK_REFERENCE_FOUND:INTERNAL=
+LAPACK_REFERENCE_INCLUDEDIR:INTERNAL=
+LAPACK_REFERENCE_LIBDIR:INTERNAL=
+LAPACK_REFERENCE_LIBS:INTERNAL=
+LAPACK_REFERENCE_LIBS_L:INTERNAL=
+LAPACK_REFERENCE_LIBS_OTHER:INTERNAL=
+LAPACK_REFERENCE_LIBS_PATHS:INTERNAL=
+LAPACK_REFERENCE_MODULE_NAME:INTERNAL=
+LAPACK_REFERENCE_PREFIX:INTERNAL=
+LAPACK_REFERENCE_STATIC_CFLAGS:INTERNAL=
+LAPACK_REFERENCE_STATIC_CFLAGS_I:INTERNAL=
+LAPACK_REFERENCE_STATIC_CFLAGS_OTHER:INTERNAL=
+LAPACK_REFERENCE_STATIC_LIBDIR:INTERNAL=
+LAPACK_REFERENCE_STATIC_LIBS:INTERNAL=
+LAPACK_REFERENCE_STATIC_LIBS_L:INTERNAL=
+LAPACK_REFERENCE_STATIC_LIBS_OTHER:INTERNAL=
+LAPACK_REFERENCE_STATIC_LIBS_PATHS:INTERNAL=
+LAPACK_REFERENCE_VERSION:INTERNAL=
+//Have function cblas_ddot
+PKGCFG_HAVE_CBLAS:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//CHECK_TYPE_SIZE: sizeof(void*)
+SIZE_OF_VOID_PTR:INTERNAL=8
 //ADVANCED property for variable: TIFF_INCLUDE_DIR
 TIFF_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: TIFF_LIBRARY_DEBUG
@@ -866,4 +1202,40 @@ _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/single_robot_control
+__pkg_config_checked_BLAS_REFERENCE:INTERNAL=1
+__pkg_config_checked_LAPACK_REFERENCE:INTERNAL=1
+//ADVANCED property for variable: atlas_lib
+atlas_lib-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: cblas_lib
+cblas_lib-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: generic_blas
+generic_blas-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: lapack_lib
+lapack_lib-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: mkl_core
+mkl_core-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: mkl_include_dir
+mkl_include_dir-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: mkl_intel
+mkl_intel-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: mkl_iomp
+mkl_iomp-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: mkl_pthread
+mkl_pthread-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: mkl_rt
+mkl_rt-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: mkl_thread
+mkl_thread-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: openmp_libraries
+openmp_libraries-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: satlas_lib
+satlas_lib-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: sqlite
+sqlite-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: sqlite_path
+sqlite_path-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: tatlas_lib
+tatlas_lib-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+test_for_neon_worked:INTERNAL=FALSE
 

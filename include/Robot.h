@@ -15,12 +15,13 @@
 #include "Controller.h"
 #include "Localizer.h"
 #include "Problem_Instance.h"
+#include "Sensors.h"
 
 
 
 class Robot {
 public:
-    Robot(Pose pose_init, Path_Planner& path_planner, Controller& controller, Localizer& localizer, double motion_noise);
+    Robot(Pose pose_init, RRT& rrt, Controller& controller, Localizer& localizer, Sensors& senors, double motion_noise);
 
     void run_control_architecture(Problem_Instance& problem, bool talk);
 
@@ -45,9 +46,10 @@ private:
     double motion_noise;
 
     // modules
-    Path_Planner* path_planner;
+    RRT* rrt;
     Controller* controller;
     Localizer* localizer;
+    Sensors* sensors;
 
 };
 

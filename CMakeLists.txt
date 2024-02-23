@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 
 add_subdirectory(matplotplusplus)
-
+add_subdirectory(C:/cpp_libraries/dlib-19.24 dlib_build)
 
 
 
@@ -22,7 +22,9 @@ add_executable(single_robot_control main.cpp
         include/Localizer.h
         src/Problem_Instance.cpp
         include/Problem_Instance.h
+        src/Sensors.cpp
+        include/Sensors.h
 )
 
-target_link_libraries(single_robot_control PUBLIC matplot)
+target_link_libraries(single_robot_control PUBLIC matplot dlib::dlib)
 

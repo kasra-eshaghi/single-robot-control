@@ -5,7 +5,7 @@
 
 #include "../include/Robot.h"
 
-Robot::Robot(Pose pose_init, Path_Planner& path_planner, Controller& controller, Localizer& localizer, double motion_noise){
+Robot::Robot(Pose pose_init, RRT& rrt, Controller& controller, Localizer& localizer, Sensors& sensors, double motion_noise){
     std::cout << "Initializing robot with its modules.." << std::endl;
 
     // robot's initial position
@@ -17,10 +17,11 @@ Robot::Robot(Pose pose_init, Path_Planner& path_planner, Controller& controller,
     // motion noise of the robot
     this->motion_noise = motion_noise;
 
-
-    this->path_planner = &path_planner;
+    // robot's modules
+    this->rrt = &rrt;
     this->controller = &controller;
     this->localizer = &localizer;
+    this->sensors = &sensors;
 }
 void Robot::run_control_architecture(Problem_Instance& problem, bool talk) {
 
@@ -28,29 +29,38 @@ void Robot::run_control_architecture(Problem_Instance& problem, bool talk) {
     if (talk){
         std::cout << "Planning path ..." << std::endl;
     }
-    path_planner->plan_linear_path(problem.pose_init, problem.pose_final, linear_path);
+    rrt->plan_path_RRT(talk);
 
-    // motion control loop
-    double n_iterations = 100;
-    double delta_t = 1/n_iterations;
-    for (auto i=0 ; i <n_iterations; i++){
-        // determine next desired position
-        double s = double(i) / n_iterations;
-        path_planner->get_desired_pose(pose_desired, linear_path, s);
+    for (auto j=0; j<(rrt->planned_path.size() - 1); j++){
+        Pose starting_pose = rrt->planned_path[j].pose;
+        Pose ending_pose = rrt->planned_path[j+1].pose;
+        plan_linear_path(starting_pose, ending_pose, linear_path);
 
-        if (talk){
-            std::cout << "Next desired position: [" << pose_desired.x << ", " << pose_desired.y << "]" << std::endl;
+        // motion control loop
+        double n_iterations = 5;
+        double delta_t = 1/n_iterations;
+        Pose pose_desired;
+        for (auto i=0 ; i <n_iterations; i++){
+            // determine next desired position
+            double s = double(i) / n_iterations;
+            get_desired_pose(pose_desired, linear_path, s);
+
+            // calculate motion commands through controller
+            controller->calculate_motion_command(pose_hat, pose_desired, motion_command);
+
+            // execute motion commands
+            execute_motion_commands();
+
+            // get sensor measurements
+            sensors->get_measurements(pose_true);
+
+            // localize robot
+            localizer->localize_robot(pose_hat_history, pose_hat, motion_command, sensors->delta_x_measurements, sensors->delta_y_measurements, sensors->measurement_mask, problem.map);
         }
 
-        // calculate motion commands through controller
-        controller->calculate_motion_command(pose_hat, pose_desired, motion_command);
-
-        // execute motion commands
-        execute_motion_commands();
-
-        // localize robot
-        localizer->localize_robot(pose_hat_history, pose_hat, motion_command, delta_t);
     }
+
+
 
 }
 

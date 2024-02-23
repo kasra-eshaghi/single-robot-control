@@ -17,51 +17,28 @@
 
 using namespace matplot;
 
+
+#include <dlib/optimization.h>
+#include <dlib/global_optimization.h>
+
 int main() {
 
+
+    // generate problem instace
     std::default_random_engine generator;
     auto fig = matplot::figure();
     matplot::hold(matplot::on);
     // create problem instance
     Problem_Instance problem(0.5, 5, 0.1, generator);
 
-    problem.plot_problem_instance(fig);
+    //problem.plot_problem_instance(fig);
 
-    fig->show();
-    matplot::cla(fig->current_axes());
-
-    // create RRT instance
+    // generate robot and its modules
     RRT rrt(problem, generator);
-
-    // plan using RRt
-    rrt.plan_path_RRT(true);
-
-//    bool success = rrt.sample_random_node();
-//    if (success){
-//        plot_RRT_nodes(problem, rrt.nodes, fig);
-//    }
-
-    //fig->show();
-
-/*
-    // create problem instance
-    Pose pose_0{0, 0};
-    Pose pose_f{10, 10};
-    Pose pose_init{0, 0};
-    Problem_Instance problem{pose_0, pose_f, pose_init};
-
-    // create path planning module
-    Path_Planner path_planner;
-
-    // create motion controller module
     Controller controller(1.0);
-
-    // create localization module
     Localizer localizer;
-
-    // create robot with modules
-    double motion_noise = 0.5;
-    Robot robot(problem.pose_init, path_planner, controller, localizer, motion_noise);
+    Sensors sensors(problem, 0.1, generator, 3);
+    Robot robot(problem.pose_init, rrt, controller, localizer, sensors, 0.5);
 
     // run robot control architecture
     robot.run_control_architecture(problem, false);
@@ -82,7 +59,24 @@ int main() {
 
     show();
 
-*/
+
+
+
+
+    /*
+    matplot::cla(fig->current_axes());
+
+    // create RRT instance
+    RRT rrt(problem, generator);
+
+    // plan using RRt
+    rrt.plan_path_RRT(true);
+    */
+
+
+
+
+
 
     return 0;
 }

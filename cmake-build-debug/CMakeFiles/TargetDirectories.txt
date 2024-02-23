@@ -31,3 +31,16 @@ C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/matplotplu
 C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/matplotplusplus/source/matplot/CMakeFiles/install.dir
 C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/matplotplusplus/source/matplot/CMakeFiles/install/local.dir
 C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/matplotplusplus/source/matplot/CMakeFiles/install/strip.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/CMakeFiles/edit_cache.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/CMakeFiles/rebuild_cache.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/CMakeFiles/list_install_components.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/CMakeFiles/install.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/CMakeFiles/install/local.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/CMakeFiles/install/strip.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/CMakeFiles/dlib.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/CMakeFiles/edit_cache.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/CMakeFiles/rebuild_cache.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/CMakeFiles/list_install_components.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/CMakeFiles/install.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/CMakeFiles/install/local.dir
+C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug/dlib_build/dlib/CMakeFiles/install/strip.dir

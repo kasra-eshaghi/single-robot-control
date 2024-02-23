@@ -11,6 +11,83 @@
 -- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Could NOT find FFTW (missing: FFTW_INCLUDE_DIRS) 
 Setting matplotplusplus compiler options
--- Configuring done (1.7s)
--- Generating done (0.1s)
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:7 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Using CMake version: 3.27.8
+-- Compiling dlib version: 19.24.0
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+Call Stack (most recent call first):
+  C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:33 (include)
+
+
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/use_cpp_11.cmake:5 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+Call Stack (most recent call first):
+  C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:50 (include)
+
+
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/find_libpng.cmake:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+Call Stack (most recent call first):
+  C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:443 (include)
+
+
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+Call Stack (most recent call first):
+  C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:485 (include)
+
+
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/test_for_neon/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at C:/cpp_libraries/dlib-19.24/dlib/cmake_utils/find_libjpeg.cmake:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+Call Stack (most recent call first):
+  C:/cpp_libraries/dlib-19.24/dlib/CMakeLists.txt:504 (include)
+
+
+-- C++11 activated.
+-- Configuring done (1.5s)
+-- Generating done (0.2s)
 -- Build files have been written to: C:/Users/user/Documents/GitHub/single-robot-control/cmake-build-debug
